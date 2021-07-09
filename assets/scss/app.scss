@@ -1,0 +1,91 @@
+// variables
+@import "variables";
+
+// header style
+@import "./header.scss";
+
+// main page style
+@import "./main/main.scss";
+
+// footer style
+@import "./footer.scss";
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	font-family: "Public Sans", sans-serif;
+	font-size: 18px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	h1 {
+		color: $DarkBlue;
+		font-size: 2.5rem;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+
+	h2 {
+		color: $DarkBlue;
+		margin-bottom: 1rem;
+		font-size: 2.2rem;
+	}
+
+	p {
+		margin-bottom: 1.5rem;
+		color: $GrayishBlue;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	@media screen and (min-width: $designBreakPoint) {
+		.custom-container-left {
+			padding-left: 12%;
+		}
+
+		.custom-container {
+			padding-left: 12%;
+			padding-right: 12%;
+		}
+
+		h1 {
+			text-align: start;
+			font-size: $desktopH1;
+		}
+	}
+
+	.nav-req-btn {
+		color: $White;
+		font-weight: bold;
+		padding: 0.5rem 1.4rem;
+		background: linear-gradient(90deg, $LimeGreen, $BrightCyan 89%);
+		border-radius: 20px;
+
+		&:hover {
+			cursor: pointer;
+			background: linear-gradient(
+				90deg,
+				darken($LimeGreen, 5),
+				darken($BrightCyan, 5) 89%
+			);
+		}
+
+		&:active,
+		:focus {
+			cursor: pointer;
+			background: linear-gradient(
+				90deg,
+				lighten($LimeGreen, 5),
+				lighten($BrightCyan, 5) 89%
+			);
+			box-shadow: 0 0 5px $GrayishBlue;
+		}
+	}
+}

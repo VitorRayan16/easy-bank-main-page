@@ -1,0 +1,100 @@
+footer {
+	background: $DarkBlue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 0;
+
+	.easy-and-social {
+		height: 100%;
+		width: 100%;
+		margin-bottom: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+
+		.social-media {
+			margin-top: 2rem;
+			margin-bottom: 0;
+			li {
+				padding: 0 1rem;
+			}
+		}
+	}
+
+	.btn-and-copy {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+
+		p {
+			margin: 1rem 0 0 0 !important;
+		}
+	}
+
+	.navigation {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		li {
+			padding: 0.2rem 0;
+			margin-bottom: 0.8rem;
+
+			a {
+				color: $White;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	ul {
+		display: flex;
+	}
+
+	@media screen and (min-width: $designBreakPoint) {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 3rem 0;
+
+		.easy-and-social {
+			align-items: flex-start;
+			width: auto;
+
+			.social-media {
+				li {
+					margin-right: 1rem;
+					padding: 0;
+				}
+			}
+		}
+
+		.btn-and-copy {
+			align-items: flex-start;
+		}
+
+		.navigation {
+			width: 20rem;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			margin-left: 4rem;
+			flex-direction: row;
+
+			li {
+				width: 40%;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

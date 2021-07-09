@@ -1,0 +1,75 @@
+#latest-articles-section {
+	padding: 2rem 0;
+	background: $VeryLightGray;
+
+	h1 {
+		margin-bottom: 2rem;
+	}
+
+	.article-area {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		@include paddingAlignment;
+
+		p {
+			font-size: 0.9rem;
+			text-align: start;
+		}
+
+		.article-display {
+			width: 100%;
+			background: $White;
+			border-radius: 10px;
+			overflow: hidden;
+			height: 100%;
+			margin-bottom: 2rem;
+
+			.article-img {
+				height: 200px;
+				width: 100%;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.text-area {
+				padding: 5% 10%;
+
+				h2 {
+					font-size: 1.2rem;
+					margin-bottom: 0.3rem !important;
+
+					&:hover {
+						cursor: pointer;
+						color: $LimeGreen;
+					}
+				}
+
+				h6 {
+					font-size: 0.7rem;
+					color: $GrayishBlue;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: $designBreakPoint) {
+		padding: 6rem 0;
+
+		h1 {
+			margin-bottom: 4rem;
+		}
+
+		.article-area {
+			padding: 0;
+
+			.article-display {
+				width: 20%;
+			}
+		}
+	}
+}

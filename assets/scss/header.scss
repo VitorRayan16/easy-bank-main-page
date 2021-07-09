@@ -1,0 +1,64 @@
+.header {
+	box-shadow: 0 1px 3px rgb(161, 161, 161);
+	height: 70px;
+	position: relative;
+	z-index: 1000;
+	background: $White;
+
+	.desktop-nav,
+	.nav-req-btn {
+		display: none;
+	}
+
+	.desktop-nav {
+		height: 100%;
+
+		ul {
+			height: 100%;
+		}
+
+		li {
+			height: 100%;
+			@include flexCenter;
+			position: relative;
+
+			.green-bar {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 4px;
+				background-color: $LimeGreen;
+				visibility: hidden;
+			}
+
+			&:hover {
+				.green-bar {
+					visibility: visible;
+				}
+			}
+
+			a {
+				color: $GrayishBlue;
+				padding: 0 1rem;
+
+				&:hover {
+					color: $DarkBlue;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		justify-content: space-around !important;
+		height: 90px;
+
+		.desktop-nav,
+		.nav-req-btn {
+			display: block;
+		}
+
+		.toggle-nav {
+			display: none;
+		}
+	}
+}
