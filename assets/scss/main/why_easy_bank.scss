@@ -53,6 +53,34 @@
 				p {
 					text-align: start;
 				}
+
+				p,
+				h2,
+				svg {
+					transform: translateY(50%);
+					opacity: 0;
+				}
+
+				.svg-animate,
+				.h2-animate,
+				.p-animate {
+					transition: all ease-in 0.2s;
+				}
+
+				.svg-animate {
+					transform: translateY(0);
+					opacity: 1;
+				}
+
+				.h2-animate {
+					transform: translateY(0);
+					opacity: 1;
+				}
+
+				.p-animate {
+					transform: translateY(0);
+					opacity: 1;
+				}
 			}
 		}
 	}

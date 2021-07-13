@@ -62,3 +62,19 @@
 		}
 	}
 }
+
+.nav-modal-list {
+	padding: 1.3rem 0;
+
+	li {
+		padding: 0.5rem 0;
+		a {
+			color: $DarkBlue;
+		}
+	}
+}
+
+.close-nav {
+	display: none;
+	position: absolute;
+}
