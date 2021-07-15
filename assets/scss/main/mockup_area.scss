@@ -31,7 +31,7 @@
 			top: -18%;
 			right: -20%;
 			height: 150%;
-			transform: translateY(-100%);
+			transform: translateY(-20%);
 			opacity: 0;
 		}
 	}
@@ -76,13 +76,13 @@
 			display: block;
 
 			.background-svg {
-				transform: translateX(100%);
-				opacity: 0.3;
+				transform: translateX(70%);
+				opacity: 0;
 			}
 
 			.background-svg-normal-animate {
 				transform: translateX(0);
-				transition: ease-in 0.2s;
+				transition: ease-in 0.3s;
 				opacity: 1;
 			}
 		}

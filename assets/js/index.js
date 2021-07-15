@@ -37,13 +37,20 @@ let timer = null;
 
 const startAnimation = () => {
 	let time = 0;
-	reasons.forEach((el) => {
+	for (let i = 0; i < reasons.length; i++) {
+		const el = reasons[i];
+		if (i == 0) {
+			addAnimatedClasses(el);
+			time++;
+			continue;
+		}
+
 		timer = setTimeout(() => {
 			addAnimatedClasses(el);
 		}, CLASS_TIMING * reasons.length * time);
 		time++;
 		timers.push(timer);
-	});
+	}
 };
 
 const addAnimatedClasses = (el) => {
@@ -103,6 +110,23 @@ toggle.addEventListener("click", () => {
 });
 
 closeNav.addEventListener("click", () => {
+	toggle.style.display = "block";
+	closeNav.style.display = "none";
+	navModal.hide();
+});
+
+window.addEventListener("resize", () => {
+	const windowWidth = document.documentElement.clientWidth;
+
+	console.log(windowWidth);
+
+	if (windowWidth > 1440) {
+		toggle.style.display = "none";
+		closeNav.style.display = "none";
+		navModal.hide();
+		return;
+	}
+
 	toggle.style.display = "block";
 	closeNav.style.display = "none";
 	navModal.hide();
